@@ -120,30 +120,30 @@
 
 ### Сырые данные (3 файла, ~3 000 клиентов)
 
-**[userdata.csv](/userdata.csv)**
+**[userdata.csv](data/userdata.csv)**
 - Демография пользователей (возраст, пол, образование, семейный статус)
 - Даты регистрации
 - Количество детей
 
-**[orderdata.csv](/orderdata.csv)**
+**[orderdata.csv](data/orderdata.csv)**
 - История заказов (временные метки, суммы, категории)
 - Средние чеки
 - Частота покупок
 
-**[interactiondata.csv](/interactiondata.csv)**
+**[interactiondata.csv](data/interactiondata.csv)**
 - Взаимодействия с маркетинговыми кампаниями
 - Активность на сайте/в приложении
 - Результаты кампаний (успех/неудача)
 
 ### Обработанные данные
 
-**[cleaned_userdata.csv](/cleaned_userdata.csv)** — Данные пользователей после удаления выбросов и валидации
+**[cleaned_userdata.csv](data/cleaned_userdata.csv)** — Данные пользователей после удаления выбросов и валидации
 
-**[cleaned_orderdata.csv](/cleaned_orderdata.csv)** — Данные заказов после очистки отрицательных значений
+**[cleaned_orderdata.csv](data/cleaned_orderdata.csv)** — Данные заказов после очистки отрицательных значений
 
-**[cleaned_interactiondata.csv](/cleaned_interactiondata.csv)** — Данные взаимодействий после валидации
+**[cleaned_interactiondata.csv](data/cleaned_interactiondata.csv)** — Данные взаимодействий после валидации
 
-**[age_interactiondata.csv](/age_interactiondata.csv)** — Сегментированный анализ, объединяющий демографию с паттернами взаимодействий
+**[age_interactiondata.csv](data/age_interactiondata.csv)** — Сегментированный анализ, объединяющий демографию с паттернами взаимодействий
 
 ---
 
