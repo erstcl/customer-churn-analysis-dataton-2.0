@@ -1,4 +1,4 @@
-[🇬🇧 English version](README.md) | [🇷🇺 Русская версия](README.ru.md) 
+[🇷🇺 Русская версия](README.ru.md) | [🇬🇧 English version](README.md)
 
 ---
 
@@ -50,38 +50,42 @@ The marketing campaigns were designed for single individuals and failed to addre
 
 ---
 
-## Proposed Solution
+## Analysis Pipeline
 
-### 4-Pillar Recovery Strategy
+### 1. Data Cleaning & Preprocessing
+- Removed negative values and outliers (8-11% of data)
+- Merged three datasets: user data, order data, interaction data
+- Created age-based cohorts and segmentation
 
-**1. Analysis & Optimization**
-- Deep-dive into customer data and competitor benchmarking
-- Segment-specific analysis (age, family status, education)
-- Identify high-value customer personas
+### 2. Exploratory Data Analysis
+- **User complaints timeline**: identified complaint spike in June-July
+- **Churn analysis**: tracked last order dates to identify churned users
+- **Demographic segmentation**: analyzed by age, education, family status, children
+- **Marketing effectiveness**: evaluated 5 campaigns across segments
 
-**2. Customer Win-Back**
-- Launch retention campaigns with family-oriented promotions
-- Collect structured feedback from churned users
-- Implement loyalty programs for returning customers
+### 3. Insights & Visualization
+- Purchasing patterns by age and income
+- Marketing campaign success rates by demographic
+- Churn distribution across customer segments
 
-**3. Service Improvement**
-- Redesign menu with family-friendly options (meal kits, kids' meals, family bundles)
-- Optimize delivery logistics for larger orders
-- Improve UX for family segment
+---
 
-**4. Targeted Promotion**
-- Reallocate ad budget to family-focused channels
-- Create compelling content for parents and families
-- Test messaging across demographic segments
+## Key Results
 
-### Budget Allocation
+**Overall Accuracy** | 83% marketing mismatch identified  
+**Posts analyzed** | 3,000+ customer records  
+**Outliers cleaned** | 8-11% of raw data  
+**Churn peak** | Weeks 26-27 (late June 2024)  
 
-**Total budget**: ~4M RUB
+### Business Impact
 
-- **Social media advertising**: 900K RUB
-- **Contextual advertising (Yandex, Google)**: 700K RUB  
-- **Outdoor/city advertising**: 2.3M RUB
-- **Targeting specialist services**: 85K RUB
+**Primary insight**: Marketing campaigns targeted singles while product serves families → 60%+ churn in target demographic
+
+**Recommended budget reallocation**:
+- Social media: 900K RUB (family-oriented content)
+- Contextual ads: 700K RUB (parent-focused keywords)
+- Outdoor advertising: 2.3M RUB (family lifestyle imagery)
+- Targeting specialist: 85K RUB
 
 ---
 
@@ -92,47 +96,81 @@ The marketing campaigns were designed for single individuals and failed to addre
 - **Churn analysis**: identified churn peak (weeks 26-27), visualized customer inflow/outflow patterns
 - **Marketing campaign effectiveness**: evaluated 5 campaigns across demographic segments, discovered family segment gap
 - **Strategic recommendations**: co-developed 4-pillar recovery strategy with budget allocation and risk assessment
+- **Visualization**: created age-income distributions, campaign effectiveness charts, churn timelines
 
 ---
 
-## Tools & Methods
+## Technical Stack
 
-### Analytics
-- **Data cleaning**: outlier detection, negative value removal
-- **Visualization**: time-series analysis, cohort analysis, segmentation charts
-- **Correlation analysis**: feature correlation matrix
-
-### Business Strategy
-- **Segmentation**: demographic, behavioral, and psychographic
-- **Hypothesis testing**: marketing effectiveness by segment
-- **Risk management**: identified 3 major risks (creative quality, channel selection, budget constraints)
-
-### Tools
-- **Python**: pandas, matplotlib, seaborn (for data analysis and visualization)
+### Tools & Libraries
+- **Python**: pandas, numpy, matplotlib, seaborn
+- **Analysis**: Jupyter Notebook
+- **Visualization**: matplotlib (scatter plots, histograms, time series)
 - **Presentation**: MS PowerPoint
 
----
-
-## Key Insights
-
-1. **Marketing-product mismatch**: Single-focused campaigns for a family-oriented product
-2. **Educated customers churn fastest**: Higher education segment expects better service quality
-3. **Campaign #2 was critically flawed**: Lowest engagement across all segments
-4. **Family segment = highest LTV potential**: But completely ignored in current strategy
+### Methods
+- **Data cleaning**: outlier detection, negative value removal
+- **Segmentation**: demographic, behavioral analysis
+- **Cohort analysis**: time-based churn patterns
+- **Statistical analysis**: correlation matrices, distribution analysis
 
 ---
 
-## Risks Identified
+## Dataset Description
 
-- **Low creative quality**: Boring ads repel potential customers
-- **Wrong channel selection**: Wasted budget on platforms where target audience isn't present
-- **Insufficient budget**: Limited reach and frequency for brand awareness
+### Raw Data (3 files, ~3,000 customers)
+
+**[userdata.csv](/userdata.csv)**
+- User demographics (age, gender, education, family status)
+- Registration dates
+- Children count
+
+**[orderdata.csv](/orderdata.csv)**
+- Order history (timestamps, amounts, categories)
+- Average check values
+- Purchase frequency
+
+**[interactiondata.csv](/interactiondata.csv)**
+- Marketing campaign interactions
+- Website/app engagement
+- Campaign outcomes (success/failure)
+
+### Processed Data
+
+**[cleaned_userdata.csv](/cleaned_userdata.csv)** — User data after outlier removal and validation
+
+**[cleaned_orderdata.csv](/cleaned_orderdata.csv)** — Order data after cleaning negative values
+
+**[cleaned_interactiondata.csv](/cleaned_interactiondata.csv)** — Interaction data after validation
+
+**[age_interactiondata.csv](/age_interactiondata.csv)** — Segmented analysis combining user demographics with interaction patterns
 
 ---
 
 ## Documentation
 
-- [Team presentation](/dataton_presentation.pdf) — full analysis deck with visualizations
+- [Full analysis notebook](/dataton.ipynb) — complete EDA, segmentation, and insights
+- [Final presentation](/dataton_presentation.pdf) — strategy and recommendations
+
+---
+
+## Frameworks & Methods
+
+### Strategy
+- 3C Analysis (Company, Customers, Competition)
+- SWOT
+- Customer segmentation
+
+### Analytics
+- Cohort analysis (time-based churn)
+- Demographic segmentation
+- Marketing attribution analysis
+- Outlier detection and data cleaning
+
+### Visualization
+- Scatter plots (age vs income, payment ability)
+- Histograms (order distributions by demographics)
+- Time series (churn patterns, complaint trends)
 
 ---
 
@@ -143,9 +181,3 @@ The marketing campaigns were designed for single individuals and failed to addre
 - Identify business problems through data
 - Develop data-driven solutions
 - Present findings in technical presentation + video pitch
-
----
-
-## Team
-
-**aCUtone!** — Central University student team specializing in data analytics and business strategy
