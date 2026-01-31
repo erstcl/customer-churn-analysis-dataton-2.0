@@ -120,30 +120,30 @@ The marketing campaigns were designed for single individuals and failed to addre
 
 ### Raw Data (3 files, ~3,000 customers)
 
-**[userdata.csv](/userdata.csv)**
+**[userdata.csv](data/userdata.csv)**
 - User demographics (age, gender, education, family status)
 - Registration dates
 - Children count
 
-**[orderdata.csv](/orderdata.csv)**
+**[orderdata.csv](data/orderdata.csv)**
 - Order history (timestamps, amounts, categories)
 - Average check values
 - Purchase frequency
 
-**[interactiondata.csv](/interactiondata.csv)**
+**[interactiondata.csv](data/interactiondata.csv)**
 - Marketing campaign interactions
 - Website/app engagement
 - Campaign outcomes (success/failure)
 
 ### Processed Data
 
-**[cleaned_userdata.csv](/cleaned_userdata.csv)** — User data after outlier removal and validation
+**[cleaned_userdata.csv](data/cleaned_userdata.csv)** — User data after outlier removal and validation
 
-**[cleaned_orderdata.csv](/cleaned_orderdata.csv)** — Order data after cleaning negative values
+**[cleaned_orderdata.csv](data/cleaned_orderdata.csv)** — Order data after cleaning negative values
 
-**[cleaned_interactiondata.csv](/cleaned_interactiondata.csv)** — Interaction data after validation
+**[cleaned_interactiondata.csv](data/cleaned_interactiondata.csv)** — Interaction data after validation
 
-**[age_interactiondata.csv](/age_interactiondata.csv)** — Segmented analysis combining user demographics with interaction patterns
+**[age_interactiondata.csv](data/age_interactiondata.csv)** — Segmented analysis combining user demographics with interaction patterns
 
 ---
 
